@@ -1,0 +1,802 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ru" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ru" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Linux &mdash; Документация Документация 1.0-alpha</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="prev" title="Курс Linux!" href="index.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Документация
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                stable
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Linux</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">О системе</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Введение</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Ядро</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Спор об именовании</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">Дистрибутивы</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">Применение</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c-c">Работа c cистемой</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Графический интерфейс</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">Консоль</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">Файловая система. Права</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#c-fhs">Cтандарт иерархии файловой системы(FHS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#systemd">Systemd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">Установка приложений</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id12">Список часто используемых команд с пояснением</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#man">man</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pwd">pwd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cd">cd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ls">ls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#touch">touch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mkdir">mkdir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cp">cp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mv">mv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rm">rm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#echo">echo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cat">cat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ping">ping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ip">ip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#useradd">useradd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#passwd">passwd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#su">su</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sudo">sudo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#exit">exit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ps">ps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#htop">htop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kill">kill</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ssh">ssh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scp">scp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hostname">hostname</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">Установка пакетов</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">Полезные комбинации клавиш</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id15">Предложения и пожелания</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Документация</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Linux</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="linux">
+<h1>Linux<a class="headerlink" href="#linux" title="Ссылка на этот заголовок">¶</a></h1>
+<p><a class="reference external" href="https://school9.perm.ru/gate/tester/?page=testing&amp;changeto=389">Контест: Linuxcourse</a></p>
+<div class="section" id="id1">
+<h2>О системе<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="id2">
+<h3>Введение<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h3>
+<p><strong>Linux</strong> - ядро ОС, разработка начата финским студентом Линусом Торвальдсом.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Ядро - наиболее низкий уровень абстракции для доступа приложений к ресурсам системы, необходимым для их работы.</li>
+</ul>
+</div></blockquote>
+<p><strong>GNU/Linux</strong> - операционные системы, основанные на ядре Linux и системных библиотеках GNU (а часто и другом ПО)</p>
+<img alt="_images/gnulinux.png" src="_images/gnulinux.png" />
+<p>Системы <strong>GNU/Linux</strong> распространяются на условиях лицензии особого рода, известной под названием <strong>GNU-лицензии</strong> <em>(GNU General Public License, или GPL)</em>. Она устанавливает несколько условий на распространение и изменение свободного программного обеспечения. <strong>GNU-лицензия</strong> делает программное обеспечение свободно распространяемым, но не передаёт его в пользование обществу, а защищает права автора.</p>
+<p>Согласно <strong>GNU</strong> программа свободна, если у ее пользователей есть четыре важнейших свободы:</p>
+<ul class="simple">
+<li>Свобода выполнять программу как вам угодно в любых целях <em>(свобода 0)</em>.</li>
+<li>Свобода изучать работу программы и модифицировать программу, чтобы она выполняла ваши вычисления, как вы пожелаете <em>(свобода 1)</em>. Это предполагает доступ к исходному тексту.</li>
+<li>Свобода передавать копии, чтобы помочь другим <em>(свобода 2)</em>.</li>
+<li>Свобода передавать копии своих измененных версий другим <em>(свобода 3)</em>. Этим вы можете дать всему сообществу возможность получать выгоду от ваших изменений. Это предполагает доступ к исходному тексту.</li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h3>Ядро<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Ядро <strong>Linux</strong> - очень большая программа, представляющая следующие функции:</p>
+<p><strong>Хранение данных:</strong></p>
+<ul class="simple">
+<li>RAM - Чтение и запись данных в оперативную память.</li>
+<li>Постоянное хранение - Чтение и запись данных на постоянные запоминающие устройства.</li>
+<li>Виртуальная файловая система.</li>
+</ul>
+<p><strong>Доступ к сетям:</strong></p>
+<ul class="simple">
+<li>Работа с физическими сетями (Ethernet, Wireless, LTE, коммутаторы, Bluetooth.</li>
+<li>Виртуальные сети.</li>
+</ul>
+<p><strong>Планирование задач:</strong></p>
+<ul class="simple">
+<li>Совместное использование процессорного времени программами.</li>
+<li>Балансировка нагрузки процессора и приоритеты.</li>
+</ul>
+<p><strong>Поддержка внешних устройств:</strong></p>
+<ul class="simple">
+<li>Съемные USB носители.</li>
+<li>Веб-камеры.</li>
+<li>Мыши и клавиатуры.</li>
+</ul>
+<p><strong>Безопасность:</strong></p>
+<ul class="simple">
+<li>Права доступа к файлам для пользователей и групп;</li>
+<li>Разрешение доступа к ресурсам системы;</li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>Спор об именовании<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h3>
+<div class="vl docutils container">
+<em>Если вы называете нашу операционную систему “Linux”, это передаёт неверное представление о её истоках, истории и назначении. Если вы называете её “GNU/Linux”, это передаёт (хоть и не во всех подробностях) правильное представление.</em></div>
+<p>- Gnu.org</p>
+<p>Операционные системы, основанные на ядре <strong>Linux</strong> и системных библиотеках <strong>GNU</strong> , часто называют просто <strong>Linux</strong>. Однако проект <strong>GNU</strong> настаивает на названии <strong>GNU/Linux</strong>. Особо сильно на это реагриуерт <em>Ричард Мэттью Столлман(RMS)</em>, основатель движения свободного ПО и проекта <strong>GNU</strong>.</p>
+<p><em>Линус Торвальдс</em>, автор ядра <strong>Linux</strong>, на настойчивые требования <em>Ричарда Столлмана</em> поддержать его позицию всегда реагировал слабо, заявляя, что занимается разработкой программного обеспечения, а не политикой.</p>
+<p><em>RMS</em>:</p>
+<img alt="_images/rms.jpg" src="_images/rms.jpg" />
+</div>
+</div>
+<div class="section" id="id5">
+<h2>Дистрибутивы<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Дистрибутив <strong>GNU/Linux</strong> — общее определение операционных систем, использующих ядро Linux, представляющий собой настроенную систему с предустановленным комплектом приложений. У каждого дистрибутива свои правила и свое сообщество.</p>
+<p>В настоящее время существует более шестисот дистрибутивов <strong>GNU/Linux</strong>; более половины из них поддерживаются в актуальном состоянии, что обеспечивается регулярным выпуском обновлений разработчиками дистрибутива.</p>
+<p>Современные диструбутивы берут начало от трех старейших: <strong>Slackware</strong>, <strong>Debian</strong>, <strong>Red Hat</strong>.</p>
+<img alt="_images/distros.jpg" src="_images/distros.jpg" />
+<p><a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg">GNU/Linux Distributions Timeline</a></p>
+</div>
+<div class="section" id="id6">
+<h2>Применение<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Благодаря возможностями трансформации и масштабирования <strong>Linux</strong> ее можно встретить во всех областях компьютерной техники.</p>
+<ul class="simple">
+<li>Лидер на рынке серверов.</li>
+<li>Лидер на рынке мобильных ОС (<em>Ядро ОС Android - Linux</em>).</li>
+<li>Лидер на рынке встраеваемых систем.</li>
+<li>Главный элемент кластеров и моделей распределенных вычислений.</li>
+<li>100% суперкомпьютеров из ТОП-500 мира работают на <strong>Linux</strong>.</li>
+<li>Востребован наукоемкими специальностями благодаря высокой скорости вычислений.</li>
+</ul>
+<img alt="_images/lintop.gif" src="_images/lintop.gif" />
+</div>
+<div class="section" id="c-c">
+<h2>Работа c cистемой<a class="headerlink" href="#c-c" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="id7">
+<h3>Графический интерфейс<a class="headerlink" href="#id7" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Внешний вид cистемы очень близок к популярным <strong>Windows</strong> или <strong>Mac OS</strong>, поэтому новым пользователям не придется долго привыкать к системе. С другой стороны, под <strong>Linux</strong> существует множество графических оболочек на любой вкус, цвет и характеристики компьютера. Любую из них можно настроить до мелочей.</p>
+<p><a class="reference external" href="https://www.reddit.com/r/unixporn/hot/">Примеры</a></p>
+</div>
+<div class="section" id="id9">
+<h3>Консоль<a class="headerlink" href="#id9" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Куда более интересная часть системы. Взаимодействуя с компьютером через <em>консоль</em> можно сделать все то же, что и через графический интерфейс, и даже много больше.</p>
+<p><em>Терминал</em> - это устройство, при помощи которого человек взаимодействуют с компьютером. Изначально в качестве терминалов применялись электромеханические телетайпы.</p>
+<p>В большинстве современных компьютеров работа терминала эмулируется средствами ОС, позволяя работать с текстовыми приложениями, когда графическую оболочку запустить невозможно или не нужно. При запущенной же графической оболочке возможно использовать специальные приложения — <em>эмуляторы терминала</em>. Современный терминал и эмуляторы сейчас обобщенно называют <em>консолями</em>.</p>
+<p>Взаимодейсвтие с компьютером осуществляется посредством команд, которые имеют следующий вид:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">название</span> <span class="n">команды</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">опции</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">аргументы</span><span class="p">]</span>
+</pre></div>
+</div>
+<img alt="https://github.com/Vladius25/linuxcourse/blob/master/cowsay.png?raw=true" src="https://github.com/Vladius25/linuxcourse/blob/master/cowsay.png?raw=true" />
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Название</td>
+<td>cowsay</td>
+</tr>
+<tr class="row-even"><td>Опции</td>
+<td>-e99</td>
+</tr>
+<tr class="row-odd"><td>Аргумент</td>
+<td>Hellow, world</td>
+</tr>
+</tbody>
+</table>
+<p>Некоторые команды требуют прав <em>суперпользователя</em>.
+<em>На самом деле, большинство команд - это программы, все так же с открытым исходным кодом, который можно редактировать</em>.</p>
+</div>
+<div class="section" id="id10">
+<h3>Файловая система. Права<a class="headerlink" href="#id10" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Отдельно стоит упамянуть о файловой системе(ФС) и правах доступа. В отличие от <strong>Windows</strong> в <strong>GNU/Linux</strong> используется ФС <strong>ext4</strong>. Одним из основных ее отличий является поддержка <strong>прав доступа</strong> к файлам и папкам</p>
+<p>Права бывают трех типов:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Read(<strong>r</strong>) - чтение файлов или папок.</li>
+<li>Write(<strong>w</strong>) - запись в файл или папку.</li>
+<li>Execute(<strong>x</strong>) - запуск программ.</li>
+</ul>
+</div></blockquote>
+<p>Правами могут обладать:</p>
+<ul class="simple">
+<li>Владелец файла или папки.</li>
+<li>Группа пользователей.</li>
+<li>Все остальные, не входящие в первые 2 группы.</li>
+</ul>
+<p>Так выглядит полная информация о правах на файл в ФС <strong>ext4</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">rwx</span> <span class="n">rw</span><span class="o">-</span> <span class="n">r</span><span class="o">--</span> <span class="n">vladius</span> <span class="n">wheel</span> <span class="n">devyatka</span><span class="o">.</span><span class="n">cpp</span>
+</pre></div>
+</div>
+<p>Это значит, что права на файл <em>devyatka.cpp</em> распределены следующим образом:</p>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Роль</th>
+<th class="head">Объект</th>
+<th class="head">Права</th>
+<th class="head">Обозначение</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Владелец</td>
+<td><em>vladius</em></td>
+<td>read/write/execute</td>
+<td>rwx</td>
+</tr>
+<tr class="row-odd"><td>Группа</td>
+<td><em>wheel</em></td>
+<td>read/write</td>
+<td>rw-</td>
+</tr>
+<tr class="row-even"><td>Остальные</td>
+<td><em>Все</em></td>
+<td>read</td>
+<td>r–</td>
+</tr>
+</tbody>
+</table>
+<p>Особый пользователь <strong>root</strong> называется <em>суперпользователем</em> и имеет безграничные права на любой файл.</p>
+</div>
+<div class="section" id="c-fhs">
+<h3>Cтандарт иерархии файловой системы(FHS)<a class="headerlink" href="#c-fhs" title="Ссылка на этот заголовок">¶</a></h3>
+<p><strong>FHS</strong> предлагает следующую иерархию подкатологов в корневом /:</p>
+<ul>
+<li><p class="first">/bin - основные утилиты, необходимые как в однопользовательском режиме, так и при обычной работе всем пользователям.</p>
+</li>
+<li><p class="first">/boot - неизменяемые файлы, необходимые для загрузки системы.</p>
+</li>
+<li><p class="first">/dev - файлы устройств.</p>
+</li>
+<li><p class="first">/etc - файлы конфигурации системы на данном компьютере.</p>
+</li>
+<li><p class="first">/home - домашние каталоги пользователей.</p>
+</li>
+<li><p class="first">/lib - основные разделяемые библиотеки и модули ядра.</p>
+</li>
+<li><p class="first">/mnt - точку монтирования для временно подключаемых файловых систем.</p>
+</li>
+<li><p class="first">/root - домашний каталог пользователя root.</p>
+</li>
+<li><p class="first">/opt - дополнительное программное обеспечение..</p>
+</li>
+<li><p class="first">/sbin - основные системные программы для администрирования и настройки системы.</p>
+</li>
+<li><p class="first">/tmp - временные файлы.</p>
+</li>
+<li><p class="first">/usr - вторичная иерархия для данных пользователя. Содержит большинство пользовательских приложений и утилит, используемых в многопользовательском режиме.</p>
+<blockquote>
+<div><ul class="simple">
+<li>/usr/bin - дополнительные программы для всех пользователей, не являющиеся необходимыми в однопользовательском режиме.</li>
+<li><strong>Факт</strong>: Изначально  /usr использовался для хранения домашних директорий. Когда стало нехватать места под bin, было решено создать пользователя bin.</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">/var - изменяемые файлы, такие как файлы регистрации, временные почтовые файлы.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="systemd">
+<h3>Systemd<a class="headerlink" href="#systemd" title="Ссылка на этот заголовок">¶</a></h3>
+<p><strong>Systemd</strong> — подсистема инициализации <strong>Linux</strong> — <em>демон</em> (программа, работающая в фоне) для запуска других <em>демонов</em> в <strong>Linux</strong> и управления ими в процессе работы системы. Название происходит от принятого в <strong>Unix</strong> добавления суффикса <em>-d</em> к демонам.</p>
+<p>Разработана <em>Леннартом Поттерингом</em> взамен используемого ранее демона <em>init</em>. В свое время вызвала огромное количество не утихающий до сих пор споров. Сейчас исользуется по умолчанию во всех популярных диструбутивах.</p>
+<p>Помимо простого запуска и контроля сервисов, <strong>systemd</strong> предлагает некоторые другие удобные функции, для использования которых ранее системным администраторам приходилось прибегать к помощи дополнительных программ-демонов. Среди таких функций:</p>
+<ul class="simple">
+<li>Сокет-активация служб (заменяет <em>inetd</em>).</li>
+<li>Запуск сервисов по расписанию (заменяет <em>cron</em>).</li>
+<li>Работа с аппаратным сторожевым таймером (заменяет <em>watchdog</em>).</li>
+<li>Смена корня (заменяет <em>chroot</em>).</li>
+<li>Автомонтирование томов и сетевых ресурсов (заменяет <em>mount</em> и <em>fstab</em>).</li>
+<li>Удобная работа с логами посредством <strong>journald</strong> (заменяет <em>syslog</em>)</li>
+</ul>
+</div>
+<div class="section" id="id11">
+<h3>Установка приложений<a class="headerlink" href="#id11" title="Ссылка на этот заголовок">¶</a></h3>
+<p>В отличие от <strong>Windows</strong> и <strong>Mac OS</strong> на <strong>GNU/Linux</strong> строго не рекоммендуется скачивать приложения с сайтов, даже с официальных. Все приложения представлены в виде <em>пакетов</em>, которые хранятся в <em>репозиториях</em> вашего дистрибутива.</p>
+<p>Чтобы установить пакет, нужно воспользоваться графической утилитой или <strong>пакетным менеджером</strong> (В каждом диструбитве свой, например, <em>dnf</em> в <strong>Fedora</strong> или <em>apt</em> в <strong>Debian/Ubuntu</strong>). Пример использования ищите ниже.</p>
+</div>
+</div>
+<div class="section" id="id12">
+<h2>Список часто используемых команд с пояснением<a class="headerlink" href="#id12" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Если хотите быстро понять, что делает команда, что означают ее опции и аргументы, зайдите на <a class="reference external" href="https://www.explainshell.com/">explainshell.com</a>. К сожалению, ресурс заблокирован в России.</p>
+<div class="section" id="man">
+<h3>man<a class="headerlink" href="#man" title="Ссылка на этот заголовок">¶</a></h3>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">&lt;команда&gt;</span></code> - подробная информация о команде <em>&lt;команда&gt;</em></li>
+</ul>
+</div>
+<div class="section" id="pwd">
+<h3>pwd<a class="headerlink" href="#pwd" title="Ссылка на этот заголовок">¶</a></h3>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">pwd</span></code> - текущая директория</li>
+</ul>
+</div>
+<div class="section" id="cd">
+<h3>cd<a class="headerlink" href="#cd" title="Ссылка на этот заголовок">¶</a></h3>
+<ul>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">&lt;директория&gt;</span></code> - сменить текущую директорию на &lt;директория&gt;</p>
+<blockquote>
+<div><ul class="simple">
+<li>Директориями в <strong>GNU/Linux</strong> называются папки</li>
+<li><code class="docutils literal notranslate"><span class="pre">~</span></code> - домашняя директория пользователя</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="ls">
+<h3>ls<a class="headerlink" href="#ls" title="Ссылка на этот заголовок">¶</a></h3>
+<ul>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">ls</span></code> - список файлов и папок в текущей директории</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-l</span></code> - подробный список(включает права, владельца, группу, размер и время редактирования)</li>
+<li><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-a</span></code> - скрытые файлы и папки(которые начинаются с <code class="docutils literal notranslate"><span class="pre">.</span></code>)</li>
+<li><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-la</span></code> - две опции вместе</li>
+<li><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">&lt;дир&gt;</span></code> - список файлов в директории <em>&lt;дир&gt;</em></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="touch">
+<h3>touch<a class="headerlink" href="#touch" title="Ссылка на этот заголовок">¶</a></h3>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">touch</span> <span class="pre">&lt;файл&gt;</span></code> - создает файл <em>&lt;файл&gt;</em></li>
+</ul>
+</div>
+<div class="section" id="mkdir">
+<h3>mkdir<a class="headerlink" href="#mkdir" title="Ссылка на этот заголовок">¶</a></h3>
+<ul>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">&lt;дир&gt;</span></code> - создает директорию <em>&lt;дир&gt;</em></p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">-p</span> <span class="pre">&lt;дир&gt;</span></code> - создает директорию <em>&lt;дир&gt;</em> и все вышележащиее директории</li>
+<li>например, <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">-p</span> <span class="pre">/test/test2/test3</span></code> - Создаст директории <em>test</em>, <em>test2</em>, <em>test3</em></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="cp">
+<h3>cp<a class="headerlink" href="#cp" title="Ссылка на этот заголовок">¶</a></h3>
+<ul>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">&lt;файл1&gt;</span> <span class="pre">&lt;файл2&gt;</span></code> - копировать <em>&lt;файл1&gt;</em> в <em>&lt;файл2&gt;</em></p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">-r</span> <span class="pre">&lt;дир1&gt;</span> <span class="pre">&lt;дир2&gt;</span></code> - копировать директорию <em>&lt;дир1&gt;</em> в <em>&lt;дир2&gt;</em></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="mv">
+<h3>mv<a class="headerlink" href="#mv" title="Ссылка на этот заголовок">¶</a></h3>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">&lt;1&gt;</span> <span class="pre">&lt;2&gt;</span></code> - переместить файл или директорию &lt;1&gt; в &lt;2&gt;</li>
+</ul>
+</div>
+<div class="section" id="rm">
+<h3>rm<a class="headerlink" href="#rm" title="Ссылка на этот заголовок">¶</a></h3>
+<ul>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">&lt;файл&gt;</span></code> - удаляет файл <em>&lt;файл&gt;</em></p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-rf</span> <span class="pre">&lt;дир&gt;</span></code> - удаляет директорию <em>&lt;дир&gt;</em> и все ее содержимое</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="echo">
+<h3>echo<a class="headerlink" href="#echo" title="Ссылка на этот заголовок">¶</a></h3>
+<ul>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">&lt;текст&gt;</span></code> - печатает <em>&lt;текст&gt;</em></p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">&lt;текст&gt;</span> <span class="pre">&gt;</span> <span class="pre">&lt;файл&gt;</span></code> - заменяет содержимое файла <em>&lt;файл&gt;</em> текстом <em>&lt;текст&gt;</em></li>
+<li><code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">&lt;текст&gt;</span> <span class="pre">&gt;&gt;</span> <span class="pre">&lt;файл&gt;</span></code> - добавляет текст <em>&lt;текст&gt;</em> в конец файла <em>&lt;файл&gt;</em></li>
+<li><code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">&lt;текст&gt;</span> <span class="pre">1&gt;&amp;2</span></code> - перенаправление <strong>stdout</strong> в <strong>stderr</strong></li>
+<li>Если целевого файла нет, он будет создан</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="cat">
+<h3>cat<a class="headerlink" href="#cat" title="Ссылка на этот заголовок">¶</a></h3>
+<ul>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">&lt;файл&gt;</span></code> - печатает содержимое файла <em>&lt;файл&gt;</em></p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">&lt;файл1&gt;</span> <span class="pre">&gt;</span> <span class="pre">&lt;файл2&gt;</span></code> - заменяет содержимое файла <em>&lt;файл1&gt;</em> содержимым <em>&lt;файл2&gt;</em></li>
+<li><code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">&lt;файл1&gt;</span> <span class="pre">&gt;&gt;</span> <span class="pre">&lt;файл2&gt;</span></code> - добавляет текст файла <em>&lt;файл1&gt;</em> в конец файла <em>&lt;файл2&gt;</em></li>
+<li>Если целевого файла нет, он будет создан</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="ping">
+<h3>ping<a class="headerlink" href="#ping" title="Ссылка на этот заголовок">¶</a></h3>
+<ul>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">ping</span> <span class="pre">&lt;хост&gt;</span></code> - проверить доступность &lt;хост&gt; в сети</p>
+<blockquote>
+<div><ul class="simple">
+<li>Например, <code class="docutils literal notranslate"><span class="pre">ping</span> <span class="pre">school9.perm.ru</span></code></li>
+<li>Чтобы остановить нажмите <strong>Ctrl-C</strong></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="ip">
+<h3>ip<a class="headerlink" href="#ip" title="Ссылка на этот заголовок">¶</a></h3>
+<ul>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">ip</span></code> - позволяет выполнять настройку сетевой подсистемы</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">ip</span> <span class="pre">link</span></code> - информация о сетевых интерйесах</li>
+<li><code class="docutils literal notranslate"><span class="pre">ip</span> <span class="pre">addr</span></code> - информация о сетевых интерйесах и адресах</li>
+<li><code class="docutils literal notranslate"><span class="pre">ip</span> <span class="pre">route</span></code> - таблица маршрутиризации</li>
+<li><code class="docutils literal notranslate"><span class="pre">ip</span> <span class="pre">neigh</span></code> - текущая ARP-таблица(таблица соотвествия <em>IP-</em> и <em>MAC</em>-адресов)</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="useradd">
+<h3>useradd<a class="headerlink" href="#useradd" title="Ссылка на этот заголовок">¶</a></h3>
+<ul>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">useradd</span> <span class="pre">&lt;пользователь&gt;</span></code> - создать пользователя <em>&lt;пользователь&gt;</em></p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">useradd</span> <span class="pre">-m</span> <span class="pre">&lt;пользователь&gt;</span></code> - создать пользователя и его домашнюю директорию(<em>/home/&lt;пользователь&gt;</em>)</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="passwd">
+<h3>passwd<a class="headerlink" href="#passwd" title="Ссылка на этот заголовок">¶</a></h3>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">passwd</span> <span class="pre">&lt;пользователь&gt;</span></code> - задать пароль пользователю <em>&lt;пользователь&gt;</em></li>
+</ul>
+</div>
+<div class="section" id="su">
+<h3>su<a class="headerlink" href="#su" title="Ссылка на этот заголовок">¶</a></h3>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">su</span> <span class="pre">&lt;пользователь&gt;</span></code> - авторизоваться под пользователем <em>&lt;пользователь&gt;</em></li>
+</ul>
+</div>
+<div class="section" id="sudo">
+<h3>sudo<a class="headerlink" href="#sudo" title="Ссылка на этот заголовок">¶</a></h3>
+<ul>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">&lt;команда&gt;</span></code> - выполнить команду <em>&lt;команда&gt;</em> от имени суперпользователя <strong>root</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>Требует права на использование.</li>
+<li>Не требует пароль <strong>root</strong>.</li>
+<li>Все команды логируются.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="exit">
+<h3>exit<a class="headerlink" href="#exit" title="Ссылка на этот заголовок">¶</a></h3>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">exit</span></code> - выйти/деавторизоваться</li>
+</ul>
+</div>
+<div class="section" id="ps">
+<h3>ps<a class="headerlink" href="#ps" title="Ссылка на этот заголовок">¶</a></h3>
+<ul>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">ps</span></code> - вывести список активных процессов текущего пользователя</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">ps</span> <span class="pre">-e</span></code> - список всех активных процессов</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="htop">
+<h3>htop<a class="headerlink" href="#htop" title="Ссылка на этот заголовок">¶</a></h3>
+<ul>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">top</span></code> - вывести в виде таблицы перечень запущенных процессов и оценить, какой объем ресурсов они потребляют</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">htop</span></code> - аналогично. Более человеко-читаемый и удобный. Обычно используется вместо <code class="docutils literal notranslate"><span class="pre">top</span></code></p>
+<blockquote>
+<div><ul class="simple">
+<li>Требуется пакет <em>htop</em></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="kill">
+<h3>kill<a class="headerlink" href="#kill" title="Ссылка на этот заголовок">¶</a></h3>
+<ul>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">kill</span> <span class="pre">&lt;pid&gt;</span></code> - отправляет сигнал процессу с идентификатором <em>&lt;pid&gt;</em></p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">kill</span> <span class="pre">-s</span> <span class="pre">&lt;сигнал&gt;</span> <span class="pre">&lt;pid&gt;</span></code> - отправляет процессу с идентификатором <em>&lt;pid&gt;</em> сигнал <em>&lt;сигнал&gt;</em></li>
+<li>Если не указана опция <code class="docutils literal notranslate"><span class="pre">-s</span></code> отправит <strong>SIGTERM</strong></li>
+<li><code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">signal.7</span></code> - подробнее о сигналах</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="ssh">
+<h3>ssh<a class="headerlink" href="#ssh" title="Ссылка на этот заголовок">¶</a></h3>
+<ul>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">&lt;пользователь&gt;&#64;&lt;хост&gt;</span></code> - удаленно подключиться к компьютеру <em>&lt;хост&gt;</em> и зайти под пользователем <em>&lt;пользователь&gt;</em></p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>SSH</strong> -  сетевой протокол, позволяющий производить удалённое управление операционной системой</li>
+<li>Когда вы подключитесь к <em>&lt;хост&gt;</em>, увидите ту же консоль</li>
+<li><code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">&lt;пользователь&gt;&#64;&lt;хост&gt;</span> <span class="pre">-p</span> <span class="pre">&lt;порт&gt;</span></code> - подключение к порту &lt;порт&gt;(если не указано, то используется 22)</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="scp">
+<h3>scp<a class="headerlink" href="#scp" title="Ссылка на этот заголовок">¶</a></h3>
+<ul>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">scp</span> <span class="pre">&lt;файл&gt;</span> <span class="pre">&lt;пользователь&gt;&#64;&lt;хост&gt;:&lt;дир&gt;</span></code> - отправить файл <em>&lt;файл&gt;</em> по протоколу <strong>SSH</strong> на компьютер <em>&lt;хост&gt;</em> под пользователем <em>&lt;пользователь&gt;</em> в директорию <em>&lt;дир&gt;</em></p>
+<blockquote>
+<div><ul class="simple">
+<li>Например, <code class="docutils literal notranslate"><span class="pre">scp</span> <span class="pre">task.xml</span> <span class="pre">root&#64;cab13c1.linux.sch9.lan:/home/vasyan/</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">scp</span> <span class="pre">-r</span> <span class="pre">&lt;дир1&gt;</span> <span class="pre">&lt;пользователь&gt;&#64;&lt;хост&gt;:&lt;дир2&gt;</span></code> - то же самое для директории</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="hostname">
+<h3>hostname<a class="headerlink" href="#hostname" title="Ссылка на этот заголовок">¶</a></h3>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">hostname</span></code> - имя компьютера</li>
+</ul>
+</div>
+<div class="section" id="id13">
+<h3>Установка пакетов<a class="headerlink" href="#id13" title="Ссылка на этот заголовок">¶</a></h3>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">dnf</span> <span class="pre">install</span> <span class="pre">&lt;пакет&gt;</span></code> - установка пакета <em>&lt;пакет&gt;</em> пакетным менеджером <em>dnf</em></li>
+<li><code class="docutils literal notranslate"><span class="pre">apt</span> <span class="pre">install</span> <span class="pre">&lt;пакет&gt;</span></code>- установка пакета <em>&lt;пакет&gt;</em> пакетным менеджером <em>apt</em></li>
+<li><code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-S</span></code> - установка пакета <em>&lt;пакет&gt;</em> пакетным менеджером <em>pacman</em></li>
+</ul>
+</div>
+<div class="section" id="id14">
+<h3>Полезные комбинации клавиш<a class="headerlink" href="#id14" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Не команды, но полезно знать</p>
+<ul>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">Ctrl-C</span></code> - посылает запущенному в треминале процессу <strong>SIGINT</strong> <em>(сигнал для остановки процесса)</em></p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">Ctrl-D</span></code> - комбинация, которая отправляет в консоль <em>EOF (End Of File)</em>. Работает схожим образом с <code class="docutils literal notranslate"><span class="pre">exit</span></code></p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">Ctrl-Z</span></code> - отправляет процессу <strong>SIGSTOP</strong> <em>(сигнал, посылаемый для принудительной приостановки выполнения процесса)</em></p>
+<blockquote>
+<div><ul class="simple">
+<li>Для возобновления выполнения используется <strong>SIGCONT</strong> или команда <code class="docutils literal notranslate"><span class="pre">fg</span></code></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id15">
+<h2>Предложения и пожелания<a class="headerlink" href="#id15" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Засылайте ваши PR <a class="reference external" href="https://github.com/Vladius25/Linuxcourse">сюда</a>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Курс Linux!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Школа 9 им А. С. Пушкина
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'1.0-alpha',
+              LANGUAGE:'ru',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  false,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

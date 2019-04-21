@@ -1,0 +1,29 @@
+* {
+    font-size: 18px !important;
+    font-family: "Comic Sans MS", cursive, sans-serif !important;
+}
+h1 {
+    font-size: 175% !important;
+}
+h2 {
+    font-size: 150% !important;
+}
+h3 {
+    font-size: 125% !important;
+}
+footer p{
+    font-size: 75% !important;
+}
+.wy-nav-content {
+    max-width: 975px !important;
+}
+.wy-nav-content p {
+    line-height: 2rem !important;
+}
+.wy-nav-content li {
+    margin-top: 10px;
+}
+.vl {
+    border-left: 3px solid #A0AABF;
+    padding: .66001rem 1rem 1rem;
+}
