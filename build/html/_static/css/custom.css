@@ -1,6 +1,6 @@
 * {
     font-size: 18px !important;
-    font-family: "Comic Sans MS", cursive, sans-serif !important;
+    font-family: sans-serif, Arial !important;
 }
 h1 {
     font-size: 175% !important;
@@ -13,6 +13,13 @@ h3 {
 }
 footer p{
     font-size: 75% !important;
+}
+.wy-nav-content pre {
+    font-size: 80%  !important;
+}
+.wy-nav-content code {
+    font-size: 90% !important;
+    font-family: inherit !important;
 }
 .wy-nav-content {
     max-width: 975px !important;

@@ -76,6 +76,8 @@ todo_include_todos = False
 #
 #html_theme = 'alabaster'
 html_theme = 'sphinx_rtd_theme'
+html_theme_path = ["_themes", ]
+
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
@@ -100,7 +102,6 @@ html_static_path = ['_static']
 def setup(app):
     app.add_stylesheet('css/custom.css')
 
-
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
 #
@@ -115,6 +116,7 @@ def setup(app):
 
 # Add favicon for generated HTML pages.
 # html_favicon = '_static/faq-icon.ico'
+html_favicon = '_static/images/favicon.ico'
 
 # Other HTML options
 html_copy_source = False
@@ -125,7 +127,7 @@ html_show_sphinx = True
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'linuxcourse'
+htmlhelp_basename = 'documentation'
 
 
 # -- Options for LaTeX output ---------------------------------------------
