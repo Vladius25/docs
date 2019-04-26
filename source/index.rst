@@ -3,7 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Великая документация
+Описание
+=======================================
+
+Данная документация предназначена для знакомства с системой **GNU/Linux**.
+
+Оглавление
 =======================================
 
 .. toctree::
