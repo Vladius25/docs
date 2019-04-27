@@ -1,6 +1,8 @@
 * {
-    font-size: 18px !important;
     font-family: sans-serif, Arial !important;
+}
+body {
+    font-size: 18px;
 }
 h1 {
     font-size: 175% !important;
@@ -14,8 +16,14 @@ h3 {
 footer p{
     font-size: 75% !important;
 }
+.wy-side-nav-search a {
+    font-size: 125% !important;
+}
 .wy-nav-content pre {
-    font-size: 80%  !important;
+    font-size: inherit  !important;
+}
+.wy-nav-content table, td, tr {
+    font-size: inherit !important;
 }
 .wy-nav-content code {
     font-size: 90% !important;
@@ -26,9 +34,17 @@ footer p{
 }
 .wy-nav-content p {
     line-height: 2rem !important;
+    font-size: inherit !important;
 }
 .wy-nav-content li {
-    margin-top: 10px;
+    margin-top: 10px !important;
+    font-size: inherit !important
+}
+.toctree-l1 li{
+    font-size: 16px !important;
+}
+.wy-menu.wy-menu-vertical.caption {
+    font-size: 17px !important;
 }
 .vl {
     border-left: 3px solid #A0AABF;
