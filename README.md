@@ -53,5 +53,5 @@ make latexpdf
 4. Откройте результат средством просмотра PDF:
 
 ```bash
-xdg-open build/latex/fedora-faq-ru.pdf
+xdg-open build/latex/docs.pdf
 ```
