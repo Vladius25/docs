@@ -13,7 +13,7 @@ h2 {
 h3 {
     font-size: 125% !important;
 }
-footer * {
+footer div[role=contentinfo] {
     font-size: 75% !important;
 }
 .wy-side-nav-search a {
@@ -38,7 +38,7 @@ footer * {
 }
 .wy-nav-content li {
     margin-top: 7px !important;
-    font-size: 90% !important
+    font-size: 16.5px !important
 }
 .wy-menu .caption * {
     font-size: 18px !important;
@@ -46,4 +46,7 @@ footer * {
 .vl {
     border-left: 3px solid #A0AABF;
     padding: .66001rem 1rem 1rem;
+}
+#comlist li {
+    font-size: inherit !important;
 }
