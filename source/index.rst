@@ -18,6 +18,7 @@
    :caption: Linux
 
    linux
+   commands
    nginx
 
 .. _other:
