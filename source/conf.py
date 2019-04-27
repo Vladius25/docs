@@ -95,6 +95,17 @@ html_theme_options = {
     'titles_only': False
 }
 
+# Integrate GitHub
+# ReadTheDocs feature
+#
+html_context = {
+    "display_github": True, # Integrate GitHub
+    "github_user": "vladius25", # Username
+    "github_repo": "docs", # Repo name
+    "github_version": "master", # Version
+    "conf_py_path": "/source/", # Path in the checkout to the docs root
+}
+
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
@@ -107,12 +118,12 @@ def setup(app):
 #
 # This is required for the alabaster theme
 # refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
-#html_sidebars = {
-#    '**': [
-#        'navigation.html',
-#        'relations.html'
-#    ]
-#}
+# html_sidebars = {
+#     '**': [
+#         'navigation.html',
+#         'relations.html'
+#     ]
+# }
 
 # Add favicon for generated HTML pages.
 # html_favicon = '_static/faq-icon.ico'
