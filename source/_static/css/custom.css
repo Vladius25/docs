@@ -13,7 +13,7 @@ h2 {
 h3 {
     font-size: 125% !important;
 }
-footer p{
+footer * {
     font-size: 75% !important;
 }
 .wy-side-nav-search a {
