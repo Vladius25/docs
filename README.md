@@ -60,6 +60,6 @@ xdg-open build/latex/docs.pdf
 Если вы не хотите ставить пакеты sphinx в систему, воспользуйтесь модулем python venv:
 
 ```bash
-./init_venv
+./init_venv.sh
 . venv/bin/activate
 ```
