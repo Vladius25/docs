@@ -20,8 +20,13 @@ keep_warnings = False
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.ifconfig',
-    'sphinx.ext.githubpages',
+    'sphinx.ext.autosectionlabel',
+    'sphinx.ext.autodoc',
+    'sphinx.ext.intersphinx',
+    'sphinxcontrib.httpdomain',
+    'sphinx_tabs.tabs',
+    'sphinx-prompt',
+    'recommonmark',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
