@@ -55,3 +55,11 @@ make latexpdf
 ```bash
 xdg-open build/latex/docs.pdf
 ```
+
+# Подготовка виртуального окружения
+Если вы не хотите ставить пакеты sphinx в систему, воспользуйтесь модулем python venv:
+
+```bash
+./init_venv
+. venv/bin/activate
+```
