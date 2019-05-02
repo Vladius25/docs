@@ -1,3 +1,4 @@
+[![Read the docs](https://img.shields.io/readthedocs/sch9-docs.svg)](https://school9.perm.ru/docs)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 # docs
