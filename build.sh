@@ -1,12 +1,13 @@
 # !/bin/bash
 
 if [ ! -d "venv" ]; then
-  echo "Can't find venv. It will be create"
+  echo "Can't find venv. It will be created"
   ./init_venv.sh
 fi
 . venv/bin/activate
 make clean
 make html
+echo ""
 
 # We need to move css includes before js to prevent loading lag
 # No idea how to fix this
