@@ -88,4 +88,4 @@ Forensics
 
     - Получить подробную информацию о содержании файла и распаковать все, что внутри: ``binwalk -e file``.
 
-* `Ознакомьтесь <http://kmb.ufoctf.ru/forensic/main.html>`_
+* `Ознакомьтесь <http://kmb.ufoctf.ru/forensic/main.html>`_.

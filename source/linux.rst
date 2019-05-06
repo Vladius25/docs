@@ -130,7 +130,7 @@
  [название команды] <опции> [аргументы]
 
 
-.. image:: https://github.com/Vladius25/linuxcourse/blob/master/cowsay.png?raw=true
+.. image:: _static/images/cowsay.png
 
 
 .. csv-table:: 
